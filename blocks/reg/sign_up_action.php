@@ -54,7 +54,7 @@ if ($password == $password1)
 //    setcookie('name', $name1, time() + 7200);
     session_start();
     $_SESSION['name']=$name1;
-    setcookie('name', $name1, time() + 7200);
+    setcookie('name', $name1, time() + 7200,'/');
     header('Location: /');
 
 }

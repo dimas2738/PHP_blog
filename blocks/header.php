@@ -14,7 +14,7 @@
     </ul>
 
     <div class="col-md-3 ">
-        <?php if (isset($_SESSION['name'])): ?>
+        <?php if (isset($_COOKIE['name'])): ?>
         <a href="/blocks/reg/logout_action.php" class="link-dark text-decoration-none  me-2 mb-2">
             <img src="../img/avatar.png" alt="" width="38" height="38" class="rounded-circle me-2">
             <strong>USER</strong>

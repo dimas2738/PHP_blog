@@ -1,5 +1,4 @@
 <?php
 session_start();
-unset($_SESSION['name']);
-//setcookie('name', $name1, time() -7200);
+setcookie('name', '', time() -7200,'/');
 header('Location: /');

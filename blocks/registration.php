@@ -14,7 +14,9 @@
 
 <main class="form-signin">
     <form action="reg/reg_action.php" method="post">
-        <img class="mb-4" src="../img/icon.ico" alt="" width="72" height="57">
+        <a href="/">
+            <img class="mb-4" src="../img/icon.ico" alt="" width="72" height="57">
+        </a>
         <h1 class="h3 mb-3 fw-normal">Please fill up registration form</h1>
         <div class="form-floating">
             <input name="name" type="name" class="form-control" id="floatingInput" placeholder="name">

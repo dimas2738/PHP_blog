@@ -14,7 +14,9 @@
 
 <main class="form-signin">
     <form action="reg/sign_up_action.php" method="post">
-        <img class="mb-4" src="../img/icon.ico" alt="" width="72" height="57">
+        <a href="/">
+            <img class="mb-4" src="../img/icon.ico" alt="" width="72" height="57">
+        </a>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
