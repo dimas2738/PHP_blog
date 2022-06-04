@@ -19,7 +19,6 @@ class DBConnection{
     {
         $dsn='mysql:host='.$this->host.';dbname='.$this->db;
         $pdo= new PDO($dsn, $this->user, $this->pass);
-////        echo 'good';
         return $pdo;
     }
 
@@ -30,6 +29,13 @@ class DBConnection{
         $query=$pdo->prepare($sql);
         $query->execute([$name, $email, $password]);
 //    echo ('good');
+    }
+
+    public function insert_data_article($title,$intro,$text){
+        $pdo=$this->connect();
+        $sql='INSERT INTO articles (title,intro,text) VALUES (?,?,?)';
+        $query=$pdo->prepare($sql);
+        $query->execute([$title,$intro,$text]);
     }
 
 

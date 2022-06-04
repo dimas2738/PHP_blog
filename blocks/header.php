@@ -17,8 +17,10 @@
         <?php if (isset($_COOKIE['name'])): ?>
         <a href="/blocks/reg/logout_action.php" class="link-dark text-decoration-none  me-2 mb-2">
             <img src="../img/avatar.png" alt="" width="38" height="38" class="rounded-circle me-2">
-            <strong>USER</strong>
+            <strong> <?=$_COOKIE['name']?></strong>
         </a>
+            <a href="./blocks/add_article.php" class="btn btn-outline-primary me-2 mb-2">Add article</a>
+
         <?php else:?>
 
         <a href="./blocks/registration.php" class="btn btn-outline-primary me-2 mb-2">Login</a>

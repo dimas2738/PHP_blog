@@ -51,23 +51,12 @@ echo 'name='.$name1;
 
 if ($password == $password1)
 {
-//    setcookie('name', $name1, time() + 7200);
-    session_start();
-    $_SESSION['name']=$name1;
+//    session_start();
+//    $_SESSION['name']=$name1;
     setcookie('name', $name1, time() + 7200,'/');
     header('Location: /');
 
 }
 else header('Location: /blocks/sign_in.php');
-
-//if ($_GET['logout'] == 'YES')
-//{
-//    setcookie('csgoserv','');
-//    header('Location: http://'.$_SERVER['SERVER_NAME']);
-//}
-//if ($_POST['password'] != $password1 )
-//{
-//    header('Location: http://'.$_SERVER['SERVER_NAME'].'/?mode=failed');
-//}
 
 ?>

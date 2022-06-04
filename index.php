@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Blog</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/icon.ico">
 </head>
 <body>
@@ -17,4 +18,5 @@
     <?php require_once('blocks/footer.php');?>
 </div>
 </body>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 </html>
