@@ -26,8 +26,9 @@ if ($error!= ''){
 
 else {
     require_once '../../classes/DBConnection.php';
+    $date= date("Y-m-d H:i:s");
     $connection= new DBConnection('root','','blog','localhost');
-    $connection->insert_data_article($title,$intro,$text);
+    $connection->insert_data_article($title,$intro,$text,$date);
     echo 'Done!';
 }
 

@@ -31,11 +31,11 @@ class DBConnection{
 //    echo ('good');
     }
 
-    public function insert_data_article($title,$intro,$text){
+    public function insert_data_article($title,$intro,$text,$date){
         $pdo=$this->connect();
-        $sql='INSERT INTO articles (title,intro,text) VALUES (?,?,?)';
+        $sql='INSERT INTO articles (title,intro,text,date) VALUES (?,?,?,?)';
         $query=$pdo->prepare($sql);
-        $query->execute([$title,$intro,$text]);
+        $query->execute([$title,$intro,$text,$date]);
     }
 
 

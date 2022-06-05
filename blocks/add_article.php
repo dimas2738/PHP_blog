@@ -33,13 +33,11 @@
 
         </div>
 
-        <!--            <form method="post" enctype="multipart/form-data">-->
 <!--        <div class="mb-3 ">upload img</div>-->
 <!--            <div class="form-floating mb-3 ">-->
 <!--                <input type="file" name="file" id="file">-->
 <!--            </div>-->
-
-            <!--            </form>-->
+<!---->
 <!--        </div>-->
 
         <div class="alert alert-danger mb-2 mt-2" id ='error_block' style="display: none"></div>
@@ -53,13 +51,28 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $('#add_article').click(function (event) {
+
+    $('#add_article').on('click',function (event) {
         event.preventDefault();
+
+
         var title = $('#title').val();
         var intro = $('#intro').val();
         var text = $('#text').val();
-        // var file= $('#file').val();
-        // alert(text)
+        // var file = $('#file').prop("files");
+
+
+
+
+        // if (window.FormData === undefined) {
+        //     alert('В вашем браузере FormData не поддерживается')
+        // } else {
+        //     var formData = new FormData();
+        //     formData.append('file', $('#file').prop("files")[0]);
+        //     console.log(formData)
+        // }
+
+
 
         $.ajax({
             url: "reg/add_article_action.php",
@@ -69,14 +82,15 @@
                 'title': title,
                 'intro': intro,
                 'text': text,
+                // 'file':formData
             },
-            dataType: 'html',
             success: function (data) {
                 if (data == 'Done!') {
                     $('#add_article').text('OK!')
                     $('#title').val('');
                     $('#intro').val('');
                     $('#text').val('');
+                    $('#error_block').text('');
                     $('#error_block').hide();
 
                 }
@@ -87,6 +101,7 @@
 
                 }
 
+                alert(data)
 
             }
         })
